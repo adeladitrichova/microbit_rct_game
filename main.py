@@ -35,7 +35,7 @@ def cast_hry():
     start = True
     music.play_melody("C", 120)
 
-    while zahajeni == True and hrac1 == False and hrac2 == False:
+    while start == True and player1 == False and player2 == False:
         basic.show_icon(IconNames.YES)
     pause(3000)
 
@@ -45,7 +45,7 @@ def vyhodnocovani():
 
     global start, player1, player2, cheater1, cheater2
     
-    if zahajeni == False and player1 == True:
+    if start == False and player1 == True:
         cheater1 = True
     
     elif start == False and player2 ==  True:
@@ -80,11 +80,11 @@ forever(vyhodnocovani)
 
 def restart():
 
-    global hrac1, hrac2, zahajeni, podvod1, podvod2
+    global player1, player2, start, cheater1, cheater2
 
-    zahajeni = False
-    hrac1 = False
-    hrac2 = False
-    podvod1 = False
-    podvod2 = False
+    start = False
+    player1 = False
+    player2 = False
+    cheater1 = False
+    cheater2 = False
     basic.clear_screen()
